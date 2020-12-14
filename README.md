@@ -1,6 +1,6 @@
 ## IOath3kfrmw, RehabMan fork's fork
 
-Atheros 3k (AR3011) kernel extension for Mac OS X - firmware upload.
+Atheros 3k (AR3011) kernel extension for macOS - firmware uploader
 
 Should work on Mojave (10.14), was tested only on Big Sur (11.0)
 
