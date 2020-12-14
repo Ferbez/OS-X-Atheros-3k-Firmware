@@ -1,17 +1,10 @@
-## IOath3kfrmw, RehabMan fork
+## IOath3kfrmw, RehabMan fork's fork
 
 Atheros 3k (AR3011) kernel extension for Mac OS X - firmware upload.
 
-Currently known to work on: Snow Leopard (10.6.8), Lion, Mountain Lion, Mavericks, Yosemite, and possibly future OS X.
+Should work on Mojave (10.14), was tested only on Big Sur (11.0)
 
 
-### Downloads
+### What was changed
 
-Current downloads:
-
-https://bitbucket.org/RehabMan/os-x-atheros-3k-firmware/downloads/
-
-
-Old/Archived downloads:
-
-https://code.google.com/p/os-x-atheros-3k-firmware/downloads/list
+Not that much honestly - even though I wasted like two or three weeks trying to figure out what was wrong. Also I bundled firmware uploader with injector (IOath3kdevice) - it's not required, but will make on/off button in system preferences work.
