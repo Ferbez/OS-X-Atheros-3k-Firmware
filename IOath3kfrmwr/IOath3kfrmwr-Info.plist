@@ -27,7 +27,7 @@
 		<key>IOath3kfrmwr-03f0-311d</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -59,7 +59,7 @@
 		<key>IOath3kfrmwr-0489-e027</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -91,7 +91,7 @@
 		<key>IOath3kfrmwr-0489-e02c</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -123,7 +123,7 @@
 		<key>IOath3kfrmwr-0930-0215</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -155,7 +155,7 @@
 		<key>IOath3kfrmwr-0b05-179c</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -187,7 +187,7 @@
 		<key>IOath3kfrmwr-0cf3-3000</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array/>
 			<key>IOClass</key>
@@ -206,7 +206,7 @@
 		<key>IOath3kfrmwr-0cf3-3002</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -238,7 +238,7 @@
 		<key>IOath3kfrmwr-13d3-3304</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
