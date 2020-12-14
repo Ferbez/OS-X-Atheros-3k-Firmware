@@ -2,16 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Source Code</key>
-	<string>https://github.com/RehabMan/OS-X-Atheros-3k-Firmware</string>
-	<key>CFBundleGetInfoString</key>
-	<string>1.2.1, Open Source 2012-2013 mac4mat, RehabMan</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.3, Open Source 2012-2020 mac4mat, RehabMan, Ferbez</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,174 +17,49 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.1</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
-	<string>Mac OS X</string>
+	<string>MacOSX</string>
 	<key>CFBundleVersion</key>
-	<string>1.2.1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>IOath3kfrmwr-13d3-3304</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>org_rehabman_IOath3kfrmwr</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>bcdDevice</key>
-			<integer>1</integer>
-			<key>idProduct</key>
-			<integer>13060</integer>
-			<key>idVendor</key>
-			<integer>5075</integer>
-			<key>CheckEndpoints</key>
-			<array>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>2</integer>
-					<key>TransferType</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>1</integer>
-					<key>TransferType</key>
-					<integer>1</integer>
-				</dict>
-			</array>
-			<key>PipeNumber</key>
-			<integer>2</integer>
-		</dict>
-		<key>IOath3kfrmwr-0930-0215</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>org_rehabman_IOath3kfrmwr</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>bcdDevice</key>
-			<integer>1</integer>
-			<key>idProduct</key>
-			<integer>533</integer>
-			<key>idVendor</key>
-			<integer>2352</integer>
-			<key>CheckEndpoints</key>
-			<array>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>2</integer>
-					<key>TransferType</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>1</integer>
-					<key>TransferType</key>
-					<integer>1</integer>
-				</dict>
-			</array>
-			<key>PipeNumber</key>
-			<integer>2</integer>
-		</dict>
-		<key>IOath3kfrmwr-0489-e027</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>org_rehabman_IOath3kfrmwr</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>bcdDevice</key>
-			<integer>1</integer>
-			<key>idProduct</key>
-			<integer>57383</integer>
-			<key>idVendor</key>
-			<integer>1161</integer>
-			<key>CheckEndpoints</key>
-			<array>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>2</integer>
-					<key>TransferType</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>1</integer>
-					<key>TransferType</key>
-					<integer>1</integer>
-				</dict>
-			</array>
-			<key>PipeNumber</key>
-			<integer>2</integer>
-		</dict>
-		<key>IOath3kfrmwr-0489-e02c</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>org_rehabman_IOath3kfrmwr</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>bcdDevice</key>
-			<integer>1</integer>
-			<key>idProduct</key>
-			<integer>57388</integer>
-			<key>idVendor</key>
-			<integer>1161</integer>
-			<key>CheckEndpoints</key>
-			<array>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>2</integer>
-					<key>TransferType</key>
-					<integer>0</integer>
-				</dict>
-				<dict>
-					<key>EndpointNumber</key>
-					<integer>1</integer>
-					<key>TransferType</key>
-					<integer>1</integer>
-				</dict>
-			</array>
-			<key>PipeNumber</key>
-			<integer>2</integer>
-		</dict>
-		<key>IOath3kfrmwr-0cf3-3000</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
-			<key>IOClass</key>
-			<string>org_rehabman_IOath3kfrmwr</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>bcdDevice</key>
-			<integer>512</integer>
-			<key>idProduct</key>
-			<integer>12288</integer>
-			<key>idVendor</key>
-			<integer>3315</integer>
-			<key>CheckEndpoints</key>
-			<array/>
-			<key>PipeNumber</key>
-			<integer>0</integer>
-		</dict>
 		<key>IOath3kfrmwr-03f0-311d</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>CheckEndpoints</key>
+			<array>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>2</integer>
+					<key>TransferType</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>1</integer>
+					<key>TransferType</key>
+					<integer>1</integer>
+				</dict>
+			</array>
 			<key>IOClass</key>
 			<string>org_rehabman_IOath3kfrmwr</string>
 			<key>IOProviderClass</key>
 			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>2</integer>
 			<key>bcdDevice</key>
 			<integer>1</integer>
 			<key>idProduct</key>
 			<integer>12573</integer>
 			<key>idVendor</key>
 			<integer>1008</integer>
+		</dict>
+		<key>IOath3kfrmwr-0489-e027</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -202,23 +75,23 @@
 					<integer>1</integer>
 				</dict>
 			</array>
-			<key>PipeNumber</key>
-			<integer>2</integer>
-		</dict>
-		<key>IOath3kfrmwr-0cf3-3002</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>IOClass</key>
 			<string>org_rehabman_IOath3kfrmwr</string>
 			<key>IOProviderClass</key>
 			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>2</integer>
 			<key>bcdDevice</key>
 			<integer>1</integer>
 			<key>idProduct</key>
-			<integer>12290</integer>
+			<integer>57383</integer>
 			<key>idVendor</key>
-			<integer>3315</integer>
+			<integer>1161</integer>
+		</dict>
+		<key>IOath3kfrmwr-0489-e02c</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -234,23 +107,106 @@
 					<integer>1</integer>
 				</dict>
 			</array>
+			<key>IOClass</key>
+			<string>org_rehabman_IOath3kfrmwr</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
 			<key>PipeNumber</key>
 			<integer>2</integer>
+			<key>bcdDevice</key>
+			<integer>1</integer>
+			<key>idProduct</key>
+			<integer>57388</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>IOath3kfrmwr-0930-0215</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>CheckEndpoints</key>
+			<array>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>2</integer>
+					<key>TransferType</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>1</integer>
+					<key>TransferType</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>IOClass</key>
+			<string>org_rehabman_IOath3kfrmwr</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>2</integer>
+			<key>bcdDevice</key>
+			<integer>1</integer>
+			<key>idProduct</key>
+			<integer>533</integer>
+			<key>idVendor</key>
+			<integer>2352</integer>
 		</dict>
 		<key>IOath3kfrmwr-0b05-179c</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>CheckEndpoints</key>
+			<array>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>2</integer>
+					<key>TransferType</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>1</integer>
+					<key>TransferType</key>
+					<integer>1</integer>
+				</dict>
+			</array>
 			<key>IOClass</key>
 			<string>org_rehabman_IOath3kfrmwr</string>
 			<key>IOProviderClass</key>
 			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>2</integer>
 			<key>bcdDevice</key>
 			<integer>512</integer>
 			<key>idProduct</key>
 			<integer>6044</integer>
 			<key>idVendor</key>
 			<integer>2821</integer>
+		</dict>
+		<key>IOath3kfrmwr-0cf3-3000</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>CheckEndpoints</key>
+			<array/>
+			<key>IOClass</key>
+			<string>org_rehabman_IOath3kfrmwr</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>0</integer>
+			<key>bcdDevice</key>
+			<integer>512</integer>
+			<key>idProduct</key>
+			<integer>12288</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>IOath3kfrmwr-0cf3-3002</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
 			<key>CheckEndpoints</key>
 			<array>
 				<dict>
@@ -266,14 +222,54 @@
 					<integer>1</integer>
 				</dict>
 			</array>
+			<key>IOClass</key>
+			<string>org_rehabman_IOath3kfrmwr</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
 			<key>PipeNumber</key>
 			<integer>2</integer>
+			<key>bcdDevice</key>
+			<integer>1</integer>
+			<key>idProduct</key>
+			<integer>12290</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>IOath3kfrmwr-13d3-3304</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.rehabman.driver.${PRODUCT_NAME:rfc1034identifier}</string>
+			<key>CheckEndpoints</key>
+			<array>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>2</integer>
+					<key>TransferType</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>EndpointNumber</key>
+					<integer>1</integer>
+					<key>TransferType</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>IOClass</key>
+			<string>org_rehabman_IOath3kfrmwr</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBDevice</string>
+			<key>PipeNumber</key>
+			<integer>2</integer>
+			<key>bcdDevice</key>
+			<integer>1</integer>
+			<key>idProduct</key>
+			<integer>13060</integer>
+			<key>idVendor</key>
+			<integer>5075</integer>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Open Source 2012-2013 mac4mat, RehabMan</string>
-	<key>OSBundleRequired</key>
-	<string>Root</string>
+	<string>Open Source 2012-2020 mac4mat, RehabMan, Ferbez</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOUSBFamily</key>
@@ -283,5 +279,9 @@
 		<key>com.apple.kpi.libkern</key>
 		<string>9.0.0</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+	<key>Source Code</key>
+	<string>https://github.com/Ferbez/OS-X-Atheros-3k-Firmware</string>
 </dict>
 </plist>

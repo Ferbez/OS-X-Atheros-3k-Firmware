@@ -279,14 +279,14 @@ bool local_IOath3kfrmwr::start(IOService *provider)
 
     // 3.1 Create IOMemoryDescriptor for bulk transfers
     char buftmp[BULK_SIZE];
-    IOMemoryDescriptor * membuf = IOMemoryDescriptor::withAddress(&buftmp, BULK_SIZE, kIODirectionNone);
+    IOMemoryDescriptor * membuf = IOMemoryDescriptor::withAddress(&buftmp, BULK_SIZE, kIODirectionOut);
     if (!membuf) {
         IOLog("%s(%p)::start - failed to map memory descriptor\n", getName(), this);
         intf->close(this);
         pUsbDev->close(this);
         return false; 
     }
-    err = membuf->prepare();
+    err = membuf->prepare(kIODirectionOut);
     if (err) {
         IOLog("%s(%p)::start - failed to prepare memory descriptor\n", getName(), this);
         intf->close(this);
@@ -304,7 +304,7 @@ bool local_IOath3kfrmwr::start(IOService *provider)
         int to_send = size < BULK_SIZE ? size : BULK_SIZE; 
         
         memcpy(buftmp, buf, to_send);
-        err = pipe->Write(membuf, 10000, 10000, to_send);
+        err = pipe->Write(membuf, 0, 0, membuf->getLength(), NULL);
         if (err) {
             IOLog("%s(%p)::start - failed to write firmware to bulk pipe (err:%d, block:%d, to_send:%d)\n", getName(), this, err, ii, to_send);
             intf->close(this);
@@ -315,6 +315,7 @@ bool local_IOath3kfrmwr::start(IOService *provider)
         size -= to_send;
         ii++;
     }
+    // It may be better to remove to_send, but for now I'll leave it here
     
 #ifdef DEBUG
     IOLog("%s(%p)::start: firmware was sent to bulk pipe\n", getName(), this);
@@ -322,7 +323,7 @@ bool local_IOath3kfrmwr::start(IOService *provider)
     IOLog("IOath3kfrmwr: firmware loaded successfully!\n");
 #endif
     
-    err = membuf->complete();
+    err = membuf->complete(kIODirectionOut);
     if (err) {
         IOLog("%s(%p)::start - failed to complete memory descriptor\n", getName(), this);
         intf->close(this);
